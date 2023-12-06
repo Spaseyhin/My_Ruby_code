@@ -2,11 +2,9 @@ system 'clear'
 file_path = "/Users/evgenijkalinin/Documents/My_Ruby_code/ruby_code/lesson_54/data/1.txt"
 
 arr = []
-file = File.new(file_path,'r')
+file = File.new(file_path,'r').readlines
 
-
-a = file.readlines
-@arr = a.map {|element| element.chomp}
+@arr = file .map {|element| element.chomp}
 new_arr = []
 
 @arr.each do |x|
@@ -17,8 +15,8 @@ new_arr = []
 		new_arr << x
 	end
 end
-puts "Масив: #{new_arr.join(', ')}"
 
+puts "Масив: #{new_arr.join(', ')}"
 
 def count_string
 	@nil_string = 0
@@ -50,8 +48,8 @@ end
 
 count_string
 counting_lines_from_the_end
-puts "пустые строки не учитываются\n\n"
 
+puts "пустые строки не учитываются\n\n"
 puts "пустых строк #{@nil_string}"
 puts "строк #{@arr.size}"
 
