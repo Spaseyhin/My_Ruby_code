@@ -3,7 +3,7 @@ file_path = "/Users/evgenijkalinin/Documents/My_Ruby_code/ruby_code/lesson_53/da
 
 if File.exist?(file_path)
 
-	file = File.new(file_path, 'r')
+	file = File.open(file_path, 'r')
 	puts file.readlines.sample
 	file.close
 

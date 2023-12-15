@@ -3,10 +3,10 @@ answer_path = "/Users/evgenijkalinin/Documents/My_Ruby_code/ruby_code/lesson_56/
 
 system ('clear')
 
-question = File.new(question_path,'r').readlines.map {|element| element.chomp} #.join(', ')
-answer = File.new(answer_path,'r').readlines.map {|element| element.chomp} #.join(', ')
+question = File.open(question_path,'r').readlines.map {|element| element.chomp} #.join(', ')
+answer = File.open(answer_path,'r').readlines.map {|element| element.chomp} #.join(', ')
 
-a = [1, 2, 3, 4]
+
 count_in_array = 0
 right_answer = 0
 
@@ -22,6 +22,6 @@ question.each do |x|
 	end
 	count_in_array += 1
 end 
-
+file&.close
 puts "Правильных ответов #{right_answer}"
 

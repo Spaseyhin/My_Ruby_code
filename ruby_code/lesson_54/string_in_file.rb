@@ -2,7 +2,7 @@ system 'clear'
 file_path = "/Users/evgenijkalinin/Documents/My_Ruby_code/ruby_code/lesson_54/data/1.txt"
 
 arr = []
-file = File.new(file_path,'r').readlines
+file = File.open(file_path,'r').readlines
 
 @arr = file .map {|element| element.chomp}
 new_arr = []
